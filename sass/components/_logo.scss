@@ -5,20 +5,20 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
   display: inline-block;
-}
 
-.logo__accent-text {
-  color: var(--accent-color);
-}
+  &__accent-text {
+    color: var(--accent-color);
+  }
 
-.logo__theme-light {
-  color: #000000;
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
-}
+  &__theme-light {
+    color: #000000;
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 
-.logo__theme-dark {
-  color: var(--primary-background-color);
-  margin-bottom: 20px;
+  &__theme-dark {
+    color: var(--primary-background-color);
+    margin-bottom: 20px;
+  }
 }

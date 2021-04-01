@@ -2,68 +2,62 @@
   display: flex;
   flex-direction: column;
   padding: 40px;
-}
 
-.modal-form__title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
 
-  color: var(--title-color);
-  margin-top: 0;
-  margin-bottom: 12px;
-}
+    color: var(--title-color);
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
 
-.modal-form__field {
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.166;
-  letter-spacing: 0.01em;
-  color: var(--primary-text-color);
-  margin-bottom: 4px;
+  &__field {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.166;
+    letter-spacing: 0.01em;
+    color: var(--primary-text-color);
+    margin-bottom: 4px;
+  }
 }
 
 .form-wrapper {
   position: relative;
-}
-
-.form-wrapper__input {
-  width: 100%;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding-left: 42px;
-  padding-right: 12px;
-  transition: border-color 250ms var(--timing-function);
-}
-
-.form-wrapper__input:focus {
-  outline: none;
-  border-color: var(--accent-color);
-}
-
-.form-wrapper {
   display: block;
   margin-bottom: 10px;
-}
-.form-wrapper__icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  display: block;
-  fill: var(--title-color);
-  transition: fill 250ms var(--timing-function);
-}
 
-.form-wrapper__input:focus + .form-wrapper__icon {
-  fill: var(--accent-color);
-}
+  &__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    padding-right: 12px;
+    transition: border-color 250ms var(--timing-function);
 
-textarea {
-  resize: none;
+    &:focus {
+      outline: none;
+      border-color: var(--accent-color);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    display: block;
+    fill: var(--title-color);
+    transition: fill 250ms var(--timing-function);
+
+    .form-wrapper__input:focus + & {
+      fill: var(--accent-color);
+    }
+  }
 }
 
 .modal-form__message {
@@ -73,16 +67,17 @@ textarea {
   border-radius: 4px;
   padding: 12px 16px;
   margin-bottom: 20px;
+  resize: none;
   transition: border-color 250ms var(--timing-function);
-}
 
-.modal-form__message::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
 
-.modal-form__message:focus {
-  outline: none;
-  border-color: var(--accent-color);
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 }
 
 .modal-form__check-desc {
@@ -93,32 +88,32 @@ textarea {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   align-items: center;
-}
 
-.modal-form__check-desc::before {
-  display: block;
-  content: "";
-  width: 16px;
-  height: 15px;
-  border: 2px solid #000000;
-  border-radius: 2px;
-  cursor: pointer;
-  margin-right: 8px;
-  transition: border 250ms var(--timing-function);
-}
+  &::before {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: border 250ms var(--timing-function);
 
-.modal-form__term:checked + .modal-form__check-desc::before {
-  background-image: url("../images/icon-check.svg");
-  background-position: center;
-  border-color: transparent;
-  background-color: var(--accent-color);
-  background-repeat: no-repeat;
-}
+    .modal-form__term:checked + & {
+      background-image: url("../images/icon-check.svg");
+      background-position: center;
+      border-color: transparent;
+      background-color: var(--accent-color);
+      background-repeat: no-repeat;
+    }
 
-.modal-form__term:focus + .modal-form__check-desc::before {
-  border: 2px solid var(--accent-color);
-  border-radius: 2px;
-  transition: 250ms var(--timing-function);
+    .modal-form__term:focus + & {
+      border: 2px solid var(--accent-color);
+      border-radius: 2px;
+      transition: 250ms var(--timing-function);
+    }
+  }
 }
 
 .policy-link {

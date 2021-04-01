@@ -33,8 +33,8 @@
 .modal-button__icon {
   fill: currentColor;
   transition: fill 250ms var(--timing-function);
-}
 
-.modal-button--close:hover .modal-button__icon {
-  fill: var(--accent-color);
+  .modal-button--close:hover & {
+    fill: var(--accent-color);
+  }
 }
